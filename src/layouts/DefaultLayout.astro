@@ -1,0 +1,17 @@
+---
+const {frontmatter} = Astro.props;
+---
+<html lang='nl'>
+    <head>
+        <title>{frontmatter.title}</title>
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Kom luisteren naar de nieuwe album ‘Where's my salad?’ van Astro Lunch en bezoek hun aanstaande Europese tournee!">
+        <meta charset="UTF-8">
+        </head>
+    <body class='p-4 prose'>
+        <h1>{frontmatter.title}</h1>
+        <p>Post author: {frontmatter.author}</p>
+        <slot /> <!-- Markdown content is injected here -->
+    </body>
+</html>
